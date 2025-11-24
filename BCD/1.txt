@@ -1,0 +1,16 @@
+1
+prova
+1-----------------------------------
+USE lojinha;
+CREATE TABLE Clientes(
+id INT PRIMARY KEY,
+nome VARCHAR(100),
+email VARCHAR(100),
+);
+
+CREATE TABLE pedidos(
+id INT PRIMARY KEY,
+status VARCHAR(100),
+cliente_id VARCHAR(100),
+data_pedido VARCHAR(100)
+);

@@ -1,0 +1,19 @@
+
+
+5--------------------------------------
+SELECT * FROM  locacoes WHERE status = 'Ativo'; 
+SELECT * FROM  locacoes WHERE status = 'entregue'; 
+SELECT * FROM  locacoes WHERE status = 'pendente'; 
+SELECT * FROM locacoes WHERE categoria = 'Ação' AND  status ='entregue';
+SELECT * FROM locacoes ORDER BY filme ASC;
+
+
+SELECT * FROM locacoes WHERE data_locacao BETWEEN "2025-01-01" AND "2025-01-31";
+SELECT * FROM locacoes LIMIT 10 OFFSET 10;
+SELECT 
+  cliente_nome AS "cliente",
+  id AS "id",
+  FILME AS "film",
+  categoria "cat"
+FROM locacoes;
+

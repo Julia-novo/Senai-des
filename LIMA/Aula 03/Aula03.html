@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+  <center><h1>Lanchonete Seu Zé</h1>
+   <hr>
+   <h3>Peça seu lanche!</h3>
+   </center>
+   <form action=""method="">
+    <p> <label for="nome">Nome Completo</label>
+
+   <input type="text" id="nome" placeholder="Insira seu nome"required/>
+    </p>
+    <label for="datanasc">Data de nascimento</label>
+    <input id ="datanasc" type="date"/>
+    <p>
+        <label for="indica">Você nos indicaria ?</label>
+        <input id="indica" type="number" min="1" max="5"/>
+    </p>
+    <p>
+<label for="email">E-mail </label>
+<input id="email" type="email"
+placeholder="informe seu e-mail" required />
+    </p>
+    <p>
+        <label for="cor"> Cor favorita</label>
+        <input id="cor" type="color" />
+    </p>
+    <p>
+        <label for="volume">Em qual volume você ouve musica 🔈 (0 a 100)</label>
+        <input id="volume" type="range" minimo="0" maximo="100" value="50" oninput="valorVolume.textContent = this.value"/>
+        <span id="valorVolume">50</span>
+        <style>
+            #volume{
+                accent-color:  rgba(8, 176, 206, 0.622);
+            }
+        </style>
+ </p>
+ <fieldset>
+    <legend>Gênero</legend>
+    <input type="radio" id="masc" name="Gênero" />
+    <label for="masc">Masculino</label>
+    <input type="radio" id="fem" name=""gênero/>
+    <label for="fem">Feminino</label>
+   <style>
+    #fem{
+        accent-color: magenta;
+    }
+    #masc{
+        accent-color: rgb(11, 11, 183);
+    }
+   </style>
+   
+   <fieldset>
+       <br>
+   </fieldset>
+   <legend> Monte seu lanche</legend>
+   <input type="checkbox" id="salada"/>
+   <label for="salada">Salada(alface e tomate)</label>
+   <br>
+   
+   <input type="checkbox" id="hamburguer"/>
+   <label for="hamburguer">Hamburguer</label>
+   <br>
+   
+   <input type="checkbox" id="bacon"/>
+   <label for="bacon">Bacon</label>
+   <br>
+
+   <input type="checkbox" id="maionese"/>
+   <label for="maionese">Maionese</label>
+   <br>
+
+   <input type="checkbox" id="ovo"/>
+   <label for="ovo">Ovo</label>
+   <br>
+
+   <input type="checkbox" id="catupiry"/>
+   <label for="catupiry">Catupiry</label>
+   <br>
+   
+   <input type="checkbox" id="ketchup"/>
+   <label for="ketchup">Ketchup</label>
+   <br>
+   
+   <input type="checkbox" id="mussarela"/>
+   <label for="mussarela">Mussarela</label>
+   <br>
+   
+   <input type="checkbox" id="cheddar"/>
+   <label for="cheddar">Cheddar</label>
+   <br>
+   
+<input type="checkbox" id="cebolacaramelizada"/>
+   <label for="cebolacaramelizada">Cebola caramelizada</label>
+   <br>
+
+   <style>
+    #salada{
+        accent-color: green;
+    }
+    #hamburguer{
+        accent-color: brown;
+    }
+    #bacon{
+        accent-color: red;
+    }
+    #maionese{
+        accent-color: white;
+    }
+    #ovo{
+        accent-color: yellow;
+    }
+    #catupiry{
+        accent-color:  white;
+    }
+    #ketchup{
+        accent-color: red;
+    }
+    #mussarela{
+        accent-color: rgb #fafad2;
+    }
+    #cheddar{
+        accent-color: orange;
+    }
+    #cebola{
+        accent-color: purple;
+    }
+    #cebolacaramelizada{
+        accent-color: rgb(107, 80, 4);
+    }
+   </style>
+
+   <style>
+
+   </style>
+   
+ </fieldset>
+
+</form>
+</body>
+</html>
+
+

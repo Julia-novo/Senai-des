@@ -1,0 +1,202 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1755785241213
+  modified: 1755785241213
+  description: ""
+collection:
+  - name: "Biblioteca "
+    meta:
+      id: fld_7fb8289abe7c45ec9b9806757bc5fc6f
+      created: 1755785925058
+      modified: 1755785925058
+      sortKey: -1755785925058
+      description: ""
+    children:
+      - name: usuarios
+        meta:
+          id: fld_0d3c986c74cf44df9dc64ec9c613ec48
+          created: 1755785957746
+          modified: 1755785957746
+          sortKey: -1755785957746
+          description: ""
+      - name: Livros
+        meta:
+          id: fld_aed81addf4fd4a2282fb1d51ab4f511a
+          created: 1756389392354
+          modified: 1756389392354
+          sortKey: -1756389392354
+          description: ""
+  - name: DER2
+    meta:
+      id: fld_9591177b8e75421d981e73cc4d683ffa
+      created: 1756983906827
+      modified: 1756983906827
+      sortKey: -1756983906827
+      description: ""
+  - name: LOJA
+    meta:
+      id: fld_f1ef424ad3ff47f0948147ae26b55208
+      created: 1758197172428
+      modified: 1758204979500
+      sortKey: -1758197172428
+      description: ""
+    children:
+      - url: http://localhost:3000/clientes
+        name: listar
+        meta:
+          id: req_a67d29e9fc4946c798c95d47e87c5c0b
+          created: 1758204966647
+          modified: 1758205419083
+          isPrivate: false
+          description: ""
+          sortKey: -1758204966647
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/clientes
+        name: Cadastrar
+        meta:
+          id: req_b9bc7a5f41cf49a0b09f69d61d409ed9
+          created: 1758204971061
+          modified: 1758205560924
+          isPrivate: false
+          description: ""
+          sortKey: -1758204971061
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome":"Fulano"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/clientes
+        name: Apagar
+        meta:
+          id: req_08aa22766df14b28afd41a80dff138a4
+          created: 1758205287813
+          modified: 1758205756470
+          isPrivate: false
+          description: ""
+          sortKey: -1758205287813
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            { "id":"2",
+                    "nome":"Pietra Fernandes",
+                     "e-mail":"pietrafernandes@gmail.com",
+                    "CPF":"13091029151"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/clientes
+        name: Atualizar
+        meta:
+          id: req_5f4d53f430014d4297dcb18abb5f0103
+          created: 1758205762135
+          modified: 1758205811242
+          isPrivate: false
+          description: ""
+          sortKey: -1758205762135
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: ""
+        name: Alterar
+        meta:
+          id: req_d6e29fe092ea4dde8f5c8d75080b2017
+          created: 1758205822354
+          modified: 1758205843470
+          isPrivate: false
+          description: ""
+          sortKey: -1758205822354
+        method: PATCH
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: ""
+        name: Consultar
+        meta:
+          id: req_626dc7cd68aa4367b93a9fb3519651c1
+          created: 1758205847643
+          modified: 1758205901248
+          isPrivate: false
+          description: ""
+          sortKey: -1758205847643
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1755785325484
+    modified: 1755785325484
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1755785325309
+    modified: 1755785325309
+    isPrivate: false

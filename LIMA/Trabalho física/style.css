@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(8, 8, 66);
+    color: white;
+    line-height: 1.5;
+}
+header{
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #111,#1c1c1c1c);
+    color: rgb(235, 12, 12);
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+header h1{
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+#lista-filmes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+    padding: 30px;
+}
+.card{
+    background: #1c1c1c;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.25 ease , box-shadow 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    position: relative;
+    width: 40%;
+}
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(245, 197, 24, 0.3);
+}
+.media-container {
+
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    /* border-bottom: 3px solid white; */
+    background: #000;
+}
+
+.media-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3 ease;
+}
+.media-container iframe{
+    width: 10%;
+    height: 10%;
+    border: none;
+}
+.card h3{
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.card p{
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+.estrelas{
+    color: #4c27c5;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d054d;
+    color: #000;
+    line-height: 1.6;
+}
+header {
+    text-align: center;
+    padding: 25px;
+    background: #1a0777;
+    color: #04445c;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+header h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 40px 20px;
+}
+.card1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #13598a90;
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px#4c27c5;
+}
+.card1 img {
+    width: 220px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+}
+.card {
+    background: #040a5290;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 900px;
+    text-align: justify;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 67, 149, 0.6);
+}

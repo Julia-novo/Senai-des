@@ -1,0 +1,20 @@
+USE locadora;
+SELECT SUM(preço) AS total_arrecadado FROM locacoes
+USE locadora;
+SELECT SUM(preco) AS preco FROM locacoes WHERE status = "Entregue";
+AVG-----
+USE locadora;
+SELECT AVG(preco) AS preco_medio  FROM filmes WHERE categoria = "Comédia";
+USE locadora;
+SELECT MIN(preco) AS maior_preco FROM locacoes WHERE status = "Pendente";
+COUNT---
+USE locadora;
+SELECT COUNT(id) AS filmes_cadastrados FROM filmes;
+USE locadora;
+SELECT COUNT(*) AS filmes_cadastrados FROM locacoes WHERE YEAR(data_locacao) =2025;
+MAX-----
+USE locadora;
+SELECT MAX(preco) AS maior_preco FROM filmes;
+Min-----
+USE locadora;
+SELECT MIN(preco) AS menor_preco  FROM filmes WHERE categoria = "Terros";

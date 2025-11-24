@@ -1,0 +1,22 @@
+2---------------------------------------
+USE bookstore;
+CREATE TABLE Livros(
+id INT PRIMARY KEY,
+titulo VARCHAR(100),
+autor VARCHAR(100),
+ano VARCHAR(15)
+);
+USE bookstore;
+CREATE TABLE emprestimos(
+id INT PRIMARY KEY,
+usuario_id VARCHAR(100),
+livro_id VARCHAR(100),
+data_retirada DATE(15),
+data_devolucao DATE(15)
+);
+USE bookstore;
+CREATE TABLE usuarios(
+id INT PRIMARY KEY,
+email VARCHAR(100),
+nome VARCHAR(100)
+);

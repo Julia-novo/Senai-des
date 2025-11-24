@@ -1,0 +1,77 @@
+DROP DATABASE escola;
+CREATE DATABASE escola;
+
+USE escola;
+
+CREATE TABLE professores(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR (100) NOT NULL,
+    email VARCHAR (100),
+    telefone VARCHAR(15)
+);
+CREATE TABLE disciplinas(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR (100) NOT NULL
+);
+CREATE TABLE turmas(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR (100) NOT NULL,
+    periodo VARCHAR(100)
+);
+
+DROP DATABASE oficina;
+CREATE DATABASE oficina;
+
+USE oficina;
+
+CREATE TABLE cliente(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR (100) NOT NULL,
+    cpf VARCHAR (100)
+);
+CREATE TABLE veiculos(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    modelo VARCHAR (100) NOT NULL,
+    placa VARCHAR (100),
+    categoria VARCHAR(100)
+);
+
+CREATE TABLE contratos(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    valor VARCHAR (100) NOT NULL,
+    data DATE
+);
+CREATE TABLE manutençoes(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR (100) NOT NULL,
+    data DATE,
+    observação VARCHAR(100)
+);
+DROP DATABASE spotify;
+CREATE DATABASE spotify;
+
+USE spotify;
+
+CREATE TABLE usuarios(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR (100) NOT NULL,
+    email VARCHAR (100)
+);
+CREATE TABLE playlist(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR (100) NOT NULL
+);
+
+CREATE TABLE musicas(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR (100) NOT NULL,
+    artista VARCHAR(90),
+    duração VARCHAR(100)
+);
+
+CREATE TABLE PLAYLIST_MUSICA(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    ordem VARCHAR(100)
+);
+
+
