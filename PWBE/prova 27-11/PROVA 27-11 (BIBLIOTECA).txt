@@ -1,0 +1,64 @@
+PROVA 27-11 (BIBLIOTECA)
+
+DROP DATABASE IF EXISTS biblioteca;
+CREATE DATABASE biblioteca;
+
+USE biblioteca;
+
+CREATE TABLE aluno(
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    turma VARCHAR(100)
+);
+
+CREATE TABLE reservas(
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  id_aluno INTEGER(100),
+  id_sala INTEGER(100),
+  data_reserva DATE,
+  horário VARCHAR(100),
+  FOREIGN KEY(id_sala)REFERENCES sala(id_sala),
+  FOREIGN KEY(id_aluno)REFERENCES aluno(id_aluno),
+);
+
+CREATE TABLE sala(
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(100),
+  capacidade INTEGER(150)
+);
+
+INSERT INTO aluno VALUES (DEFAULT, 'Bruna da Rocha', '2 ano');
+INSERT INTO aluno VALUES (DEFAULT, 'Joana da Conceição','1 ano');
+
+
+INSERT INTO sala VALUES (DEFAULT, 'Joana da Conceição', '50');
+INSERT INTO sala VALUES (DEFAULT, 'Joana da Conceição', '90');
+
+INSERT INTO reservas VALUES (DEFAULT, '12:00');
+INSERT INTO reservas  VALUES (DEFAULT, '15:45');
+
+USE bIblioteca;
+
+INSERT INTO aluno(nome, turma) VALUES
+("Bruna da Rocha", 2 ano),
+("Joana da Conceição", 1 ano);
+
+INSERT INTO sala(nome, capacidade) VALUES
+("sala de matemática",50),
+("sala de itinerário", 90);
+
+INSERT INTO reservas(id_sala, id_aluno, horário, data_reserva) VALUES
+(1, 2, "12:00", NOW()),
+(3,4, "15:45", NOW());
+
+SELECT
+COUNT (reservas_id) AS total_reservas
+FROM sala
+INNER JOIN reservas ON sala.id_sala = reservas.id_sala;
+
+SELECT
+COUNT(reservas.id) AS total_reservas
+FROM aluno
+INNER JOIN reservas ON aluno.id_aluno = reservas.id_aluno
+
+
