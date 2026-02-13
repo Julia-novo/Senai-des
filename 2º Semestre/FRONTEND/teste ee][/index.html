@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Projetos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    nav {
+      background: #34495e;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 5px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+    }
+
+    form {
+      margin-top: 10px;
+    }
+
+    input, select, button {
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: 100%;
+    }
+
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #ecf0f1;
+    }
+
+    footer {
+      text-align: center;
+      background: #2c3e50;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Gestão de Projetos</h1>
+    <p>Organize seus projetos, equipes e tarefas facilmente</p>
+  </header>
+
+  <nav>
+    <a href="#projetos">Projetos</a>
+    <a href="#funcionarios">Funcionários</a>
+    <a href="#tarefas">Tarefas</a>
+    <a href="#relatorios">Relatórios</a>
+  </nav>
+
+  <main>
+    <!-- PROJETOS -->
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <form>
+        <input type="text" placeholder="Nome do projeto" required>
+        <input type="date">
+        <input type="date">
+        <button type="submit">Registrar Projeto</button>
+      </form>
+
+      <table>
+        <tr><th>Projeto</th><th>Início</th><th>Prazo</th><th>Status</th></tr>
+        <tr><td>Site da Empresa</td><td>01/09/2025</td><td>30/11/2025</td><td>Em andamento</td></tr>
+        <tr><td>Aplicativo Móvel</td><td>05/10/2025</td><td>20/12/2025</td><td>Pendente</td></tr>
+      </table>
+    </section>
+
+    <!-- FUNCIONÁRIOS -->
+    <section id="funcionarios">
+      <h2>Funcionários</h2>
+      <form>
+        <input type="text" placeholder="Nome do funcionário" required>
+        <input type="text" placeholder="Cargo ou função">
+        <button type="submit">Registrar Funcionário</button>
+      </form>
+
+      <table>
+        <tr><th>Nome</th><th>Cargo</th></tr>
+        <tr><td>Maria Souza</td><td>Gerente de Projetos</td></tr>
+        <tr><td>Lucas Lima</td><td>Desenvolvedor</td></tr>
+      </table>
+    </section>
+
+    <!-- TAREFAS -->
+    <section id="tarefas">
+      <h2>Tarefas</h2>
+      <form>
+        <input type="text" placeholder="Descrição da tarefa" required>
+        <select>
+          <option>Selecione o projeto</option>
+          <option>Site da Empresa</option>
+          <option>Aplicativo Móvel</option>
+        </select>
+        <select>
+          <option>Selecione o funcionário</option>
+          <option>Maria Souza</option>
+          <option>Lucas Lima</option>
+        </select>
+        <input type="date">
+        <button type="submit">Registrar Tarefa</button>
+      </form>
+
+      <table>
+        <tr><th>Tarefa</th><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th></tr>
+        <tr><td>Design da Home</td><td>Site da Empresa</td><td>Lucas Lima</td><td>20/11/2025</td><td>Em andamento</td></tr>
+        <tr><td>Planejamento</td><td>Aplicativo Móvel</td><td>Maria Souza</td><td>25/11/2025</td><td>Pendente</td></tr>
+      </table>
+    </section>
+
+    <!-- RELATÓRIOS -->
+    <section id="relatorios">
+      <h2>Relatórios</h2>
+
+      <h3>Tarefas por Projeto</h3>
+      <ul>
+        <li><strong>Site da Empresa:</strong> Design da Home – Lucas Lima – 20/11/2025</li>
+      </ul>
+
+      <h3>Tarefas por Funcionário</h3>
+      <ul>
+        <li><strong>Maria Souza:</strong> Planejamento – Aplicativo Móvel – 25/11/2025</li>
+      </ul>
+
+      <h3>Tarefas desta semana</h3>
+      <ul>
+        <li>Design da Home – Lucas Lima – 20/11/2025</li>
+      </ul>
+
+      <h3>Tarefas concluídas por funcionário</h3>
+      <table>
+        <tr><th>Funcionário</th><th>Tarefas Concluídas</th></tr>
+        <tr><td>Maria Souza</td><td>4</td></tr>
+        <tr><td>Lucas Lima</td><td>2</td></tr>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Gestão de Projetos - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

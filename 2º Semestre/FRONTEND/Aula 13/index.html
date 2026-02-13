@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha estante</title>
+    <link rel = "stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+        <h1>🎥 Minha estante de filmes</h1>
+    </header>
+    <main>
+        <section id="lista-filmes"></section>
+        <section id="formulario">
+            <h2>Adicionar novo filme</h2>
+            <form id="form-filme">
+                <input type="text" id="capa"
+                placaholder="URL da capa" required />
+
+                <input type="text" id="nome"
+                placeholder="Nome do filme" required />
+
+                <input type="number" id="ano"
+                placeholder="Ano" min="1900" max="2100" required />
+
+                <input type="text" id="categoria"
+                placeholder="categoria" required />
+
+                <input type="number" id="estrelas"
+                placeholder="Estrelas (0-5)" min ="0" max="5" required />
+
+                <input type="text" id="trailer"
+                placeholder="Link do trailer (youtube embed)" required />
+
+                <button type="submit">Adicionar Filmes</button>
+            </form>
+        </section>
+    </main>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

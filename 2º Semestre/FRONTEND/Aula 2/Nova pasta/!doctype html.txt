@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-
+scale=1.0">
+<title>Memory Card Game</title>
+<link rel="stylesheet"
+href="style.css">
+</head>
+<body>
+<h1>Memory Card Game</h1>
+<div class="game-board"> <!-- Cards
+will be dynamically generated here -->
+</div> <button id="reset-
+button">Reset Game</button> <foster>
+2024 Fathur
+</foster>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+postar pelo git bash arquivo do GitHub
+git config --global user.name "Julia-Novo"
+git config --global user.email "novo.juliaicloud.com"
+-------- servem para localizar seu usuário do git hub ---------
+clonar git 
+git clone https://github.com/Julia-novo/Senai-des.git
+
+//Atualizar repositório WEB
+git add. --add informações feitas
+git commit -m "comentário"// valida as alterações 
+git push // envia as alterações 
+
+//Atualizar repositório local
+git pull ---- lembrar de fazer antes dos trabalhos 

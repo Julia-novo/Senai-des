@@ -1,0 +1,118 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: rgb(7, 7, 220);
+    color: #333;
+}
+header{
+    background: #1d023f;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+header h1{
+    margin: 0;
+    font-size: 28px;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav a{
+    color: aquamarine;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+main{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+.tabela{
+    width: 90%;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease ;
+}
+.tabela h2{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #6410d1;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead{
+    background: #333;
+    color: #fff;
+}
+thead th{
+    padding: 14px;
+    text-align: auto;
+    font-size: 8px;
+}
+td img {
+    width: 60px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+tbody tr:nth-child(odd) {background-color: #4d9bea;}
+tbody tr:nth-child(even) {background-color: #104d89;}
+tbody td{
+    padding: 12px 14px;
+    font-size: 15px;
+}
+
+tbody td a{
+    color: rgb(79, 16, 188);
+    text-decoration: none;
+    font-weight: bold;
+}
+tbody td a:hover{
+    color: white;
+    text-decoration: underline;
+}
+tbody tr{
+    transition: background 0.3s, transform 0.2s;
+}
+tbody tr:hover{
+    transform:scale(1.01);
+    filter: brightness(0.95);
+}
+.preco{
+    color:black;
+    font-weight: bold;
+}
+.estoque{
+    font-weight: bold;
+}
+.estoque.baixo{
+    color:red;
+}
+.estoque.alto{
+    color: rgb(55, 238, 4);
+}
+footer{
+    background: #1d023f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.computador{
+    background: black;
+}
