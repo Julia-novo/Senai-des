@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Loja - cadastro de filmes</h1>
+        <button onclick="abrirModal()">+ Novo FILME</button>
+    </header>
+    <main>
+          <div class="filtro-container">
+            <input type="text" id="filtroGenero" placeholder="Filtrar por gênero..." class="filtro-input">
+        </div>
+        <table>
+        <thead>
+            <tr>
+                <th>Imagem</th>
+                <th>Gênero</th>
+                <th>Nome</th>
+                <th>Ano</th>
+                <th>Sinópse</th>
+
+            </tr>
+        </thead>
+        <tbody id="dados"></tbody>
+    </table>
+    </main>
+    <!--criar modal-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Novo Filme</h2>
+            <input type="text" name="imagem" id="inputImagem">
+            <!-- <img id="previewImagem" class="preview-imagem" style="display: none;"> -->
+            <input type="text" id="nome" placeholder="Nome">
+            <input type="text" id="ano" placeholder="Ano">
+            <input type="text" id="sinopse" placeholder="Sinópse">
+            <input type="text" id ="genero" placeholder="Gênero">
+
+            <div class="modal-buttons">
+                <button onclick="salvarfilme()">Salvar</button>
+                <button onclick="fecharModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
