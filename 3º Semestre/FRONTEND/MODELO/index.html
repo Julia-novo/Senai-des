@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mercadinho da Julia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1> Loja mercearia</h1>
+  <div id="carrinho">🛒 <span id="count">0</span></div>
+</header>
+
+<main id="products"></main>
+
+<div id="modal" class="hide">
+  <div class="modal-box">
+    <h2>🛒 Carrinho</h2>
+    <div id="cartItems"></div>
+    <h3>Total: R$ <span id="total">0.00</span></h3>
+    <button id="order">Fazer pedido</button>
+    <button onclick="toggleModal()">Cancelar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

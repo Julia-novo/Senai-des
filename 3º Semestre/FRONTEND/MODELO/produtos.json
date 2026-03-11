@@ -1,0 +1,12 @@
+[
+  {"id":1,"nome":" Aroz Branco","preco":12.90},
+  {"id":2,"nome":"Feijão","preco":9.90},
+  {"id":3,"nome":"Bolacha Passatempo","preco":4.99},
+  {"id":4,"nome":"Danone Morango","preco":9.90},
+  {"id":5,"nome":"Margarina Qualy","preco":8.99},
+  {"id":6,"nome":"Batata kg","preco":3.98},
+  {"id":7,"nome":"Maçã Gala kg","preco":7.90},
+  {"id":8,"nome":"Pão Francês","preco":3.90},
+  {"id":9,"nome":"Requeijão","preco":7.90},
+  {"id":10,"nome":"Amaciante Ypê","preco":17.90}
+]
