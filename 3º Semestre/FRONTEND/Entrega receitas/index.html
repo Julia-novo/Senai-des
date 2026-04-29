@@ -8,17 +8,14 @@
 <body>
 
 <div class="container">
-  <h1>🍽️ Receitas</h1>
+  <h1> Receitas</h1>
 
-  <!-- BUSCA -->
   <input 
     type="text" 
     id="busca" 
     placeholder="Buscar receita..."
     oninput="buscarPublicacao(this.value)"
   >
-
-  <!-- FORM -->
   <form onsubmit="salvar(event)">
     <input type="hidden" id="id">
 
@@ -40,20 +37,18 @@
     <button type="submit">Salvar</button>
   </form>
 
-  <!-- LISTA -->
   <div id="lista"></div>
 </div>
 
 <script>
+    const url = 'http://localhost:3000';
 let receitas = [];
 
-// carregar dados
 function ListarPublicacao() {
   receitas = JSON.parse(localStorage.getItem("receitas")) || [];
   render();
 }
 
-// salvar / atualizar
 async function salvar(event) {
   event.preventDefault();
 
@@ -64,7 +59,7 @@ async function salvar(event) {
 
   let imagemBase64 = "";
 
-  // valida imagem
+ 
   if (fileInput.files && fileInput.files[0]) {
     const file = fileInput.files[0];
 
@@ -73,7 +68,6 @@ async function salvar(event) {
       return;
     }
 
-    // limitar tamanho (~1MB)
     if (file.size > 1024 * 1024) {
       alert("Imagem muito grande! Use uma menor que 1MB.");
       return;
@@ -112,7 +106,6 @@ async function salvar(event) {
   render();
 }
 
-// buscar
 function buscarPublicacao(texto) {
   const dados = JSON.parse(localStorage.getItem("receitas")) || [];
 
@@ -123,14 +116,13 @@ function buscarPublicacao(texto) {
   render(filtrados);
 }
 
-// excluir
 function excluirPublicacao(id) {
   receitas = receitas.filter(r => r.id !== id);
   localStorage.setItem("receitas", JSON.stringify(receitas));
   render();
 }
 
-// editar
+
 function editarPublicacao(id) {
   const receita = receitas.find(r => r.id === id);
 
@@ -139,7 +131,6 @@ function editarPublicacao(id) {
   document.getElementById("descricao").value = receita.descricao;
 }
 
-// renderizar
 function render(lista = receitas) {
   const div = document.getElementById("lista");
   div.innerHTML = "";
@@ -167,7 +158,6 @@ function render(lista = receitas) {
   });
 }
 
-// limpar form
 function limpar() {
   document.getElementById("id").value = "";
   document.getElementById("titulo").value = "";
@@ -175,7 +165,6 @@ function limpar() {
   document.getElementById("imagem").value = "";
 }
 
-// converter imagem
 function converterParaBase64(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -186,8 +175,6 @@ function converterParaBase64(file) {
     reader.readAsDataURL(file);
   });
 }
-
-// iniciar
 ListarPublicacao();
 </script>
 

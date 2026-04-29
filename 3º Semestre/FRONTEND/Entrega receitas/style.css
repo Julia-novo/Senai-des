@@ -11,28 +11,24 @@
   --sombra: rgba(0, 0, 0, 0.08);
 }
 
-/* BODY */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, var(--azul-super-claro), var(--azul-claro));
 }
 
-/* CONTAINER */
 .container {
   max-width: 700px;
   margin: auto;
   padding: 20px;
 }
 
-/* TITULO */
 h1 {
   text-align: center;
   color: var(--azul-profundo);
   margin-bottom: 20px;
 }
 
-/* INPUTS */
 input, textarea {
   width: 100%;
   padding: 12px;
@@ -43,14 +39,12 @@ input, textarea {
   transition: 0.3s;
 }
 
-/* FOCUS */
 input:focus, textarea:focus {
   outline: none;
   border-color: var(--azul);
   box-shadow: 0 0 5px var(--azul-medio);
 }
 
-/* BOTÃO */
 button {
   background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
   color: white;
@@ -62,18 +56,15 @@ button {
   font-weight: bold;
 }
 
-/* HOVER */
 button:hover {
   background: linear-gradient(135deg, var(--azul-escuro), var(--azul-profundo));
   transform: scale(1.03);
 }
 
-/* LISTA */
 #lista {
   margin-top: 20px;
 }
 
-/* CARD */
 .card {
   background: var(--branco);
   padding: 15px;
@@ -84,20 +75,17 @@ button:hover {
   transition: 0.3s;
 }
 
-/* HOVER CARD */
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px var(--sombra);
 }
 
-/* AÇÕES */
 .acoes {
   display: flex;
   gap: 10px;
   margin-top: 10px;
 }
 
-/* IMAGEM */
 .imagem {
   width: 100%;
   max-height: 220px;
