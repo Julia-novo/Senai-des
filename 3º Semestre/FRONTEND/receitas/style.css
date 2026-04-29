@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--p4);
+}
+
+:root{
+    /* //paleta de cores baseado em comida, para dar um ar mais aconchegante e apetitoso// */
+    --p1: #FF6347; /* Tomate */
+    --p2: #FFD700; /* Ouro */  
+    --p3: #FFF8DC; /* Cornsilk */
+    --p4: #333333; /* Cinza escuro para melhor legibilidade */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--p3);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85vh;
+    gap: 10px;
+    overflow-y: auto;
+}
+h1, h2{
+    padding: 10px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: var(--p1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    & img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    overflow-y:auto;
+    overflow: hidden;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    background-color: var(--p2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--p4);
+    border-radius: 5px;
+}
+button{
+    width: 20%;
+    padding: 5px;
+    background-color: var(--p1);
+    color: var(--p3);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: var(--p2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: var(--p3);
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.fechar {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+}
+header{
+    padding:20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

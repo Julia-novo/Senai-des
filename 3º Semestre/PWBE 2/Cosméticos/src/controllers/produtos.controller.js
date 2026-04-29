@@ -5,9 +5,9 @@ const cadastrar = async (req, res) => {
 
     console.log(data);
 
-    data.data_evento = new Date(data.data_evento);
+    data.data_produto = new Date(data.data_produto);
 
-    const item = await prisma.eventos.create({
+    const item = await prisma.produtos.create({
         data
     });
 
@@ -15,7 +15,7 @@ const cadastrar = async (req, res) => {
 };
 
 const listar = async (req, res) => {
-    const lista = await prisma.eventos.findMany();
+    const lista = await prisma.produtos.findMany();
 
     res.json(lista).status(200).end();
 };
@@ -23,7 +23,7 @@ const listar = async (req, res) => {
 const buscar = async (req, res) => {
     const { id } = req.params;
     
-    const item = await prisma.eventos.findUnique({
+    const item = await prisma.produtos.findUnique({
         where: { id : Number(id) }
     });
 
@@ -34,7 +34,7 @@ const atualizar = async (req, res) => {
     const { id } = req.params;
     const dados = req.body;
     
-    const item = await prisma.eventos.update({
+    const item = await prisma.produtos.update({
         where: { id : Number(id) },
         data: dados
     });
@@ -45,7 +45,7 @@ const atualizar = async (req, res) => {
 const excluir = async (req, res) => {
     const { id } = req.params;
     
-    const item = await prisma.eventos.delete({
+    const item = await prisma.produtos.delete({
         where: { id : Number(id) }
     });
 
@@ -53,7 +53,7 @@ const excluir = async (req, res) => {
 };
 
 const imagem = async (req, res) => {
-    const Imagem = await prisma.eventos.Imagem
+    const Imagem = await prisma.produtos.Imagem
 }
 module.exports = {
     cadastrar,

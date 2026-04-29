@@ -3,17 +3,17 @@ let filmes = JSON.parse(localStorage.getItem("filmes")) || [];
 document.addEventListener("DOMContentLoaded", renderizarTabela);
 const filtroGenero = document.querySelector("#filtroGenero");
 
-function abrirModal(){
+function abrirModal() {
     document.getElementById("modal").style.display = "block";
 }
 
-function fecharModal(){
+function fecharModal() {
     document.getElementById("modal").style.display = "none";
     limparCampos();
 }
 
 
-function salvarfilme(){
+function salvarfilme() {
     const imagem = document.getElementById("inputImagem").value.trim();
     const genero = document.getElementById("genero").value.trim();
     const nome = document.getElementById("nome").value.trim();
@@ -21,7 +21,7 @@ function salvarfilme(){
     const sinopse = document.getElementById("sinopse").value.trim();
 
 
-    const existe = filmes.find(filme =>filme.nome === nome);
+    const existe = filmes.find(filme => filme.nome === nome);
     if (existe) {
         alert("Nome já cadastrado!");
         return;
@@ -42,16 +42,16 @@ function salvarfilme(){
 }
 
 
-function renderizarTabela(){
+function renderizarTabela() {
     const tabela = document.getElementById("dados");
     tabela.innerHTML = "";
 
- 
-filtroGenero.addEventListener("input", () => {
-    renderizarTabela(filtroGenero.value);
-});
 
-    filmes.forEach(filmes =>{
+    filtroGenero.addEventListener("input", () => {
+        renderizarTabela(filtroGenero.value);
+    });
+
+    filmes.forEach(filmes => {
         tabela.innerHTML += `
         <tr>
         <td><img src="${filmes.imagem}"></td>
@@ -65,21 +65,21 @@ filtroGenero.addEventListener("input", () => {
                `;
     })
 }
-function excluirFilme(id){
-    if(!confirm("Deseja excluir ?")) return;
+function excluirFilme(id) {
+    if (!confirm("Deseja excluir ?")) return;
 
     filmes = filmes.filter(filme => filme.id !== id)
     atualizarLocalStorage();
     renderizarTabela();
-    
+
 }
-function atualizarLocalStorage(){
+function atualizarLocalStorage() {
     localStorage.setItem("filmes", JSON.stringify(filmes));
 }
-function limparCampos(){
-    document.getElementById("nome").value ="";
-    document.getElementById("ano").value ="";
-    document.getElementById("sinopse").value ="";
+function limparCampos() {
+    document.getElementById("nome").value = "";
+    document.getElementById("ano").value = "";
+    document.getElementById("sinopse").value = "";
 }
 
 

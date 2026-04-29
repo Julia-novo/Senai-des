@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Detalhes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1 id="titulo"></h1>
+</header>
+
+<div class="container">
+
+  <h3>Descrição:</h3>
+  <textarea id="descricao" rows="5" style="width:100%"></textarea>
+  <br><br>
+  <button onclick="salvarDescricao()">Salvar Texto</button>
+
+  <hr>
+
+  <input type="file" id="file"><br><br>
+  <button onclick="upload()">Enviar Imagem</button>
+
+  <h3>Imagens:</h3>
+  <div id="imagens"></div>
+
+  <br>
+  <button onclick="voltar()">Voltar</button>
+</div>
+
+<script src="detalhes.js"></script>
+</body>
+</html>
+
