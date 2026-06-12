@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="../web/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>Hotel Reservas</h2>
+
+        <a href="index.html">Quartos</a>
+        <a class="active" href="reservas.html">Reservas</a>
+    </div>
+
+    <div class="content">
+
+        <div class="header">
+            <h1 id="titulo">Reservas</h1>
+
+            <a id="btnNovaReserva">
+                <button class="btn btn-primary">+ Nova Reserva</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Hóspede</th>
+                        <th>Entrada</th>
+                        <th>Saída</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaReservas"></tbody>
+            </table>
+        </div>
+
+        <a href="index.html">
+            <button class="btn btn-secondary mt-20">Voltar</button>
+        </a>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

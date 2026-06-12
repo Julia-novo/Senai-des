@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel - Quartos</title>
+    <link rel="stylesheet" href="../web/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>Hotel Reservas</h2>
+
+        <a class="active" href="index.html">Quartos</a>
+        <a href="reservas.html">Reservas</a>
+    </div>
+
+    <div class="content">
+
+        <div class="header">
+            <h1>Quartos Cadastrados</h1>
+
+            <a href="cadastroQuarto.html">
+                <button class="btn btn-primary">+ Novo Quarto</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº Quarto</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaQuartos"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

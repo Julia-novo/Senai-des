@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Reserva</title>
+    <link rel="stylesheet" href="../web/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2> Hotel Reservas</h2>
+
+        <a href="index.html">Quartos</a>
+        <a href="reservas.html">Reservas</a>
+    </div>
+
+    <div class="content">
+
+        <div class="header">
+            <h1>Cadastro de Reserva</h1>
+        </div>
+
+        <div class="form">
+
+            <label>Nome do Hóspede</label>
+            <input id="hospede" type="text" placeholder="">
+
+            <label>Data de Entrada</label>
+            <input id="entrada" type="date">
+
+            <label>Data de Saída</label>
+            <input id="saida" type="date">
+
+            <button class="btn btn-primary" id="btnCadastrarReserva">
+                Cadastrar Reserva
+            </button>
+
+          <a id="voltarReserva" href="reservas.html">
+    <button class="btn btn-secondary mt-10">Voltar</button>
+</a>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
