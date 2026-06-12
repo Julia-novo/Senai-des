@@ -1,163 +1,86 @@
 const API = "http://localhost:3000";
 
-function listarQuartos() {
+const cadastrarQuarto = async (req, res) => {
+    const quarto = req.body;
 
-    const tabela = document.getElementById("listaQuartos");
-    if (!tabela) return;
+    const novoQuarto = await prisma.quarto.create({
+        data: quarto
+    });
 
-    fetch(API + "/quarto/listar")
-        .then(res => res.json())
-        .then(dados => {
+    res.status(201).json(novoQuarto);
+};
 
-            tabela.innerHTML = "";
+const listarQuartos = async (req, res) => {
+    const quartos = await prisma.quarto.findMany();
 
-            dados.forEach(q => {
+    res.status(200).json(quartos);
+};
 
-                tabela.innerHTML += `
-                    <tr>
-                        <td>${q.numero}</td>
-                        <td>${q.tipo}</td>
-                        <td>
-                            <a href="reservas.html?quartoId=${q.id}">
-                                <button>Reservas</button>
-                            </a>
+const buscarQuarto = async (req, res) => {
+    const id = Number(req.params.id);
 
-                            <button onclick="excluirQuarto(${q.id})">
-                                Excluir
-                            </button>
-                        </td>
-                    </tr>
-                `;
-            });
-
-        });
-}
-
-function cadastrarQuarto() {
-
-    const btn = document.getElementById("btnCadastrar");
-    if (!btn) return;
-
-    btn.onclick = function () {
-
-        const numero = document.getElementById("numero").value;
-        const tipo = document.getElementById("tipo").value;
-
-        if (!numero || !tipo) {
-            alert("Preencha tudo");
-            return;
+    const quarto = await prisma.quarto.findUnique({
+        where: { id },
+        include: {
+            reservas: true
         }
+    });
 
-        fetch(API + "/quarto/cadastrar", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ numero, tipo })
-        })
-        .then(() => window.location = "index.html");
-    };
-}
+    res.status(200).json(quarto);
+};
 
-function excluirQuarto(id) {
+const excluirQuarto = async (req, res) => {
+    const id = Number(req.params.id);
 
-    if (!confirm("Deseja excluir?")) return;
+    const quarto = await prisma.quarto.delete({
+        where: { id }
+    });
 
-    fetch(API + "/quarto/excluir/" + id, {
-        method: "DELETE"
-    })
-    .then(() => listarQuartos());
-}
+    res.status(200).json(quarto);
+};
 
-function listarReservas() {
+const cadastrarReserva = async (req, res) => {
+    const reserva = req.body;
 
-    const tabela = document.getElementById("listaReservas");
-    if (!tabela) return;
+    const novaReserva = await prisma.reserva.create({
+        data: reserva
+    });
 
-    const quartoId = pegarId().get("quartoId");
+    res.status(201).json(novaReserva);
+};
 
-    if (!quartoId) return;
+const listarReservas = async (req, res) => {
+    const reservas = await prisma.reserva.findMany();
 
-    fetch(API + "/reserva/listar")
-        .then(res => res.json())
-        .then(dados => {
+    res.status(200).json(reservas);
+};
 
-            tabela.innerHTML = "";
+const buscarReserva = async (req, res) => {
+    const id = Number(req.params.id);
 
-            const filtradas = dados.filter(r => r.quartoId == quartoId);
+    const reserva = await prisma.reserva.findUnique({
+        where: { id }
+    });
 
-            filtradas.forEach(r => {
+    res.status(200).json(reserva);
+};
+const excluirReserva = async (req, res) => {
+    const id = Number(req.params.id);
 
-                tabela.innerHTML += `
-                    <tr>
-                        <td>${r.id}</td>
-                        <td>${r.hospede}</td>
-                        <td>${r.dataEntrada}</td>
-                        <td>${r.dataSaida}</td>
-                        <td>
-                            <button onclick="excluirReserva(${r.id})">
-                                Excluir
-                            </button>
-                        </td>
-                    </tr>
-                `;
-            });
+    const reserva = await prisma.reserva.delete({
+        where: { id }
+    });
 
-        });
+    res.status(200).json(reserva);
+};
 
-    const btn = document.getElementById("btnNovaReserva");
-    if (btn) {
-        btn.href = "cadastroReserva.html?quartoId=" + quartoId;
-    }
-}
-
-function cadastrarReserva() {
-
-    const btn = document.getElementById("btnCadastrarReserva");
-    if (!btn) return;
-
-    btn.onclick = function () {
-
-        const hospede = document.getElementById("hospede").value;
-        const entrada = document.getElementById("entrada").value;
-        const saida = document.getElementById("saida").value;
-
-        if (!hospede || !entrada || !saida) {
-            alert("Preencha tudo");
-            return;
-        }
-
-        fetch(API + "/reserva/cadastrar", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                hospede,
-                dataEntrada: entrada,
-                dataSaida: saida,
-                quartoId: Number(quartoId)
-            })
-        })
-        .then(() => {
-            window.location = "reservas.html?quartoId=" + quartoId;
-        });
-    };
-}
-
-function excluirReserva(id) {
-
-    if (!confirm("Deseja excluir?")) return;
-
-    fetch(API + "/reserva/excluir/" + id, {
-        method: "DELETE"
-    })
-    .then(() => listarReservas());
-}
-
-function pegarId() {
-    return new URLSearchParams(window.location.search);
-}
-document.addEventListener("DOMContentLoaded", () => {
-    listarQuartos();
-    cadastrarQuarto();
-
-    listarReservas();
-    cadastrarReserva();
-});
+module.exports = {
+    cadastrarQuarto,
+    listarQuartos,
+    buscarQuarto,
+    excluirQuarto,
+    cadastrarReserva,
+    listarReservas,
+    buscarReserva,
+    excluirQuarto
+};

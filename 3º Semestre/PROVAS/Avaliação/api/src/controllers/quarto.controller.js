@@ -25,19 +25,6 @@ const buscar = async (req, res) => {
 
     res.json(item).status(200).end();
 };
-
-const atualizar = async (req, res) => {
-    const { id } = req.params;
-    const dados = req.body;
-    
-    const item = await prisma.quarto.update({
-        where: { id : Number(id) },
-        data: dados
-    });
-
-    res.json(item).status(200).end();
-};
-
 const excluir = async (req, res) => {
     const { id } = req.params;
     
@@ -52,6 +39,5 @@ module.exports = {
     cadastrar,
     listar,
     buscar,
-    atualizar,
     excluir
 }
